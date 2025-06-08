@@ -1,2 +1,4 @@
-package com.ebanking.cardservice.services;public interface ICardService {
+package com.ebanking.cardservice.services;
+
+public interface ICardService {
 }

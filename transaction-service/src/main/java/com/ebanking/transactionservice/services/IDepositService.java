@@ -1,2 +1,4 @@
-package com.ebanking.transactionservice.services;public interface IDepositService {
+package com.ebanking.transactionservice.services;
+
+public interface IDepositService {
 }

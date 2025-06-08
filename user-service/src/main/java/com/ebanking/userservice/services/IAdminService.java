@@ -1,2 +1,4 @@
-package com.ebanking.userservice.services.services;public class IAdminService {
+package com.ebanking.userservice.services;
+
+public interface IAdminService {
 }

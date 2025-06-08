@@ -1,0 +1,91 @@
+services:
+  postgres:
+    container_name: bk_pg_sql
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: bankuser
+      POSTGRES_PASSWORD: bankpass
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - banking-net
+    volumes:
+      - postgres:/data/postgres
+
+  pgadmin:
+    container_name: bk_pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - banking-net
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo
+    container_name: mongo_db_bk
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=bankuser
+      - MONGO_INITDB_ROOT_PASSWORD=bankpass
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo_express_bk
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=bankuser
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=bankpass
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper_bk
+    environment:
+      ZOOKEEPER_SERVER_ID: 1
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "22181:2181"
+    networks:
+      - banking-net
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: bk_kafka
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+    networks:
+      - banking-net
+
+
+networks:
+  banking-net:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:
+  mongo:
+

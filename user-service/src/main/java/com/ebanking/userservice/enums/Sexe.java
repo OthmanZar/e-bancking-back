@@ -1,2 +1,6 @@
-package com.ebanking.userservice.enums;public enum Sexe {
+package com.ebanking.userservice.enums;
+
+public enum Sexe {
+    MEN,
+    WOMEN
 }

@@ -1,2 +1,4 @@
-package com.ebanking.userservice.entities;public class Admin {
+package com.ebanking.userservice.entities;
+
+public class Admin {
 }
