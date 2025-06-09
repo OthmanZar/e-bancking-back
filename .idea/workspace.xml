@@ -5,36 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84537134-06f2-43f3-a891-f3e7be044bab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/entities/BankAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/entities/CurrentAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/entities/SavingAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/enums/AccountStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/exceptions/BankAccountNotFound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/repositories/BankAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/repositories/CurrentAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/repositories/SavingAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/services/CurrentAccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/services/ICurrentAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/web/CurrentAccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/client/BankAccountClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/dtos/ClientRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/exceptions/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/mappers/ClientMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/repositories/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/ClientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/web/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c93ec7d5-a818-43e0-bdc9-6c901e613d4c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c93ec7d5-a818-43e0-bdc9-6c901e613d4c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank-account-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank-account-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/UserServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/enums/Sexe.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/enums/Sexe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/IClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/IClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +36,6 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2yCao9K9L5Mje06MYU5mBfcySzE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -74,6 +47,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.AtmServiceApplication.executor": "Run",
     "Spring Boot.BankAccountServiceApplication.executor": "Run",
@@ -81,7 +55,7 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/othma/OneDrive/Bureau/PFE/e-banking-fraud-detection/card-service/src/main/java/com/ebanking/cardservice",
+    "last_opened_file_path": "C:/Users/a942231/OneDrive - ATOS/Bureau/PFE_System/e-baking-fraud-detection",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -171,8 +145,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
@@ -186,6 +160,7 @@
       <updated>1749341183954</updated>
       <workItem from="1749341185865" duration="4894000" />
       <workItem from="1749426446961" duration="8907000" />
+      <workItem from="1749509209798" duration="2511000" />
     </task>
     <servers />
   </component>
