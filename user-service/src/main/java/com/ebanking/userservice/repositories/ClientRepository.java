@@ -1,14 +1,12 @@
 package com.ebanking.userservice.repositories;
 
 import com.ebanking.userservice.entities.Client;
-import com.ebanking.userservice.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface UserRepository extends JpaRepository<User,Long> {
+public interface ClientRepository extends JpaRepository<Client,Long> {
 
 
-
-    Optional<User> findByReference(String reference);
+    Optional<Client> findByReference(String reference);
 }

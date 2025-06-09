@@ -5,37 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84537134-06f2-43f3-a891-f3e7be044bab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/entities/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/enums/CardStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/repositories/CardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/services/ICardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/web/CardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-banking-fraud-detection.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Deposit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Transfer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Withdrawal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/enums/TransactionStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/repositories/TransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/services/IDepositService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/services/ITransferService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/services/IWithdrawalService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/entities/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/entities/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/enums/Sexe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/IAdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/IClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/entities/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/entities/CurrentAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/entities/SavingAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/enums/AccountStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/exceptions/BankAccountNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/repositories/BankAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/repositories/CurrentAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/repositories/SavingAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/services/CurrentAccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/services/ICurrentAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/web/CurrentAccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/client/BankAccountClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/dtos/ClientRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/exceptions/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/mappers/ClientMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/repositories/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/ClientServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/web/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/enums/Sexe.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/enums/Sexe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/IClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/IClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
@@ -54,10 +54,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -69,9 +69,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "Spring Boot.AtmServiceApplication.executor": "Run",
+    "Spring Boot.BankAccountServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/othma/OneDrive/Bureau/PFE/e-banking-fraud-detection/card-service/src/main/java/com/ebanking/cardservice",
@@ -80,15 +87,24 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.ebanking.cardservice.enums" />
-      <recent name="com.ebanking.transactionservice.enums" />
-      <recent name="com.ebanking.userservice.enums" />
+      <recent name="com.ebanking.bankaccountservice.exceptions" />
+      <recent name="com.ebanking.bankaccountservice.services" />
+      <recent name="com.ebanking.bankaccountservice.enums" />
+      <recent name="com.ebanking.userservice.exceptions" />
+      <recent name="com.ebanking.userservice.services" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\othma\OneDrive\Bureau\PFE\e-banking-fraud-detection\card-service\src\main\java\com\ebanking\cardservice" />
@@ -114,6 +130,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BankAccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="bank-account-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ebanking.bankaccountservice.BankAccountServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CardServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="card-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ebanking.cardservice.CardServiceApplication" />
@@ -124,6 +148,21 @@
     <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="notification-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ebanking.notificationservice.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="transaction-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ebanking.transactionservice.TransactionServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ebanking.userservice.UserServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,7 +184,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749341183954</updated>
-      <workItem from="1749341185865" duration="4653000" />
+      <workItem from="1749341185865" duration="4894000" />
+      <workItem from="1749426446961" duration="8907000" />
     </task>
     <servers />
   </component>
