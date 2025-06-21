@@ -5,7 +5,143 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84537134-06f2-43f3-a891-f3e7be044bab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/clients/TransactionClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/dtos/ATMRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/dtos/ATMResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/dtos/WithdrawalRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/dtos/WithdrawalResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/entities/ATM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/enums/ATMStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/enums/TransactionStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/exceptions/AtmNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/handler/BusinessErrorCodes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/handler/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/mappers/AtmMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/repositories/ATMRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/services/AtmServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/services/IAtmService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/web/ATMController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/client/AccountClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/client/CardClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/dtos/BankAccountConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/dtos/ClientRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/dtos/CurrentResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/dtos/UpdateCurrentAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/enums/Sexe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/handler/BusinessErrorCodes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/handler/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/kafka/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/kafka/NotificationProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/mappers/CurrentAccountMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/dtos/CardConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/dtos/CardResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/dtos/UpdateCardDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/exception/CardNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/handler/BusinessErrorCodes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/handler/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/kafka/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/kafka/NotificationProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/mappers/CardMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/services/CardServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/dtos/BankAccountConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/dtos/CardConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/dtos/ClientConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/dtos/DepositConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/dtos/TransferConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/dtos/WithdrawConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/email/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/email/EmailTemplates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/entities/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/enums/AccountStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/enums/CardStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/enums/NotificationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/enums/Sexe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/kafka/NotificationConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/repositories/NotificationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ebanking/notificationservice/services/MailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/templates/bankaccount-confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/templates/card-confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/templates/client-confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/templates/transfer-confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/templates/withdraw-confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/clients/BankAccountClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/clients/CardClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/CardResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/CurrentResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/DepositConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/TransferConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/TransferRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/TransferResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/UpdateCardDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/UpdateCurrentAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/WithdrawConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/WithdrawalRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/dtos/WithdrawalResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/enums/AccountStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/enums/CardStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/exceptions/BankAccountNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/handler/BusinessErrorCodes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/handler/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/kafka/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/kafka/NotificationProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/mappers/TransferMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/mappers/WithdrawalMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/repositories/DepositRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/repositories/TransferRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/repositories/WithdrawalRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/services/TransferServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/services/WithdrawalServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/web/TransferController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/web/WithdrawalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/dtos/ClientConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/handler/BusinessErrorCodes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/handler/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/kafka/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/kafka/NotificationProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atm-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atm-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/AtmServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/atm-service/src/main/java/com/ebanking/atmservice/AtmServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atm-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/atm-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/BankAccountServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/BankAccountServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/entities/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/entities/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/repositories/CurrentAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/repositories/CurrentAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/services/CurrentAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/services/CurrentAccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/services/ICurrentAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/services/ICurrentAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/web/CurrentAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/src/main/java/com/ebanking/bankaccountservice/web/CurrentAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/card-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/entities/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/entities/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/repositories/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/repositories/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/services/ICardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/services/ICardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/web/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/card-service/src/main/java/com/ebanking/cardservice/web/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/card-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/TransactionServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/TransactionServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Deposit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Transfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Withdrawal.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/entities/Withdrawal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/services/ITransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/services/ITransferService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/services/IWithdrawalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/ebanking/transactionservice/services/IWithdrawalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/client/BankAccountClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/client/BankAccountClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/mappers/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/mappers/ClientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/IClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/services/IClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/web/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ebanking/userservice/web/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +153,8 @@
       <list>
         <option value="Record" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -33,55 +169,70 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2yCao9K9L5Mje06MYU5mBfcySzE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AtmServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BankAccountServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/othma/OneDrive/Bureau/PFE/e-banking-fraud-detection/card-service/src/main/java/com/ebanking/cardservice&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AtmServiceApplication.executor": "Run",
+    "Spring Boot.BankAccountServiceApplication.executor": "Run",
+    "Spring Boot.CardServiceApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "Spring Boot.TransactionServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-20",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/a942231/OneDrive - ATOS/Bureau/PFE_System/e-baking-fraud-detection/notification-service/src/main/java/com/ebanking/notificationservice/dtos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "Groovy compiler",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.1.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.ebanking.bankaccountservice.exceptions" />
-      <recent name="com.ebanking.bankaccountservice.services" />
-      <recent name="com.ebanking.bankaccountservice.enums" />
-      <recent name="com.ebanking.userservice.exceptions" />
-      <recent name="com.ebanking.userservice.services" />
+      <recent name="com.ebanking.atmservice.exceptions" />
+      <recent name="com.ebanking.atmservice.services" />
+      <recent name="com.ebanking.atmservice.dtos" />
+      <recent name="com.ebanking.atmservice.enums" />
+      <recent name="com.ebanking.cardservice.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\othma\OneDrive\Bureau\PFE\e-banking-fraud-detection\card-service\src\main\java\com\ebanking\cardservice" />
-      <recent name="C:\Users\othma\OneDrive\Bureau\PFE\e-banking-fraud-detection\atm-service\src\main\java\com\ebanking\atmservice" />
-      <recent name="C:\Users\othma\OneDrive\Bureau\PFE\e-banking-fraud-detection\bank-account-service\src\main\java\com\ebanking\bankaccountservice" />
-      <recent name="C:\Users\othma\OneDrive\Bureau\PFE\e-banking-fraud-detection\transaction-service\src\main\java\com\ebanking\transactionservice" />
+      <recent name="C:\Users\a942231\OneDrive - ATOS\Bureau\PFE_System\e-baking-fraud-detection\notification-service\src\main\java\com\ebanking\notificationservice\dtos" />
+      <recent name="C:\Users\a942231\OneDrive - ATOS\Bureau\PFE_System\e-baking-fraud-detection\transaction-service\src\main\java\com\ebanking\transactionservice" />
+      <recent name="C:\Users\a942231\OneDrive - ATOS\Bureau\PFE_System\e-baking-fraud-detection\card-service\src\main\java\com\ebanking\cardservice" />
+      <recent name="C:\Users\a942231\OneDrive - ATOS\Bureau\PFE_System\e-baking-fraud-detection\bank-account-service\src\main\java\com\ebanking\bankaccountservice" />
+      <recent name="C:\Users\a942231\OneDrive - ATOS\Bureau\PFE_System\e-baking-fraud-detection\user-service\src\main\java\com\ebanking\userservice\handler" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ebanking.bankaccountservice.enums" />
+      <recent name="com.ebanking.bankaccountservice.dtos" />
+      <recent name="com.ebanking.notificationservice.enums" />
+      <recent name="com.ebanking.notificationservice.dtos" />
+      <recent name="com.ebanking.atmservice.enums" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,7 +244,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AtmServiceApplication">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="AtmServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="atm-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ebanking.atmservice.AtmServiceApplication" />
@@ -131,6 +282,8 @@
       </method>
     </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ebanking.userservice.UserServiceApplication" />
@@ -138,12 +291,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AtmServiceApplication" />
+      <item itemvalue="Spring Boot.BankAccountServiceApplication" />
+      <item itemvalue="Spring Boot.CardServiceApplication" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication" />
+      <item itemvalue="Spring Boot.TransactionServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
@@ -158,10 +319,43 @@
       <workItem from="1749341185865" duration="4894000" />
       <workItem from="1749426446961" duration="8907000" />
       <workItem from="1749508442235" duration="2225000" />
+      <workItem from="1749544910018" duration="14801000" />
+      <workItem from="1749633065728" duration="21843000" />
+      <workItem from="1749716461951" duration="378000" />
+      <workItem from="1749810717696" duration="2122000" />
+      <workItem from="1750061961123" duration="9000" />
+      <workItem from="1750245505456" duration="2946000" />
+      <workItem from="1750324079300" duration="16237000" />
+      <workItem from="1750414439958" duration="7092000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="feign.FeignException$InternalServerError" package="feign" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

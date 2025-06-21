@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bank Account Confirmation</title>
+</head>
+<body>
+<h2>Bank Account Created</h2>
+<p>Your bank account has been created successfully with the following information:</p>
+<ul>
+    <li><strong>Account Number:</strong> <span th:text="${accountNumber}">0000111122223333</span></li>
+    <li><strong>Type:</strong> <span th:text="${accountType}">CURRENT</span></li>
+    <li><strong>Balance:</strong> <span th:text="${balance}">10000.00</span> MAD</li>
+    <li><strong>Status:</strong> <span th:text="${status}">ACTIVE</span></li>
+    <li th:if="${overdraft != null}">
+        <strong>Overdraft:</strong> <span th:text="${overdraft}">5000.00</span> MAD
+    </li>
+
+    <li th:if="${interestRate != null}">
+        <strong>Interest Rate:</strong> <span th:text="${interestRate}">2.5</span>%
+    </li>
+</ul>
+<p>Thank you for banking with us.</p>
+</body>
+</html>

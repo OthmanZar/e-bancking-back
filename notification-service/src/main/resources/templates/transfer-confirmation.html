@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Transfer Confirmation</title>
+</head>
+<body>
+<h2>Transfer Confirmation</h2>
+<p>Dear Client,</p>
+<p>Your fund transfer was processed with the following details:</p>
+<ul>
+    <li><strong>From Account:</strong> <span th:text="${from_accountNumber}">1111 2222 3333 4444</span></li>
+    <li><strong>To Account:</strong> <span th:text="${to_accountNumber}">5555 6666 7777 8888</span></li>
+    <li><strong>Amount:</strong> <span th:text="${amount}">3000.00</span> MAD</li>
+    <li><strong>Reason:</strong> <span th:text="${reason}">Invoice Payment</span></li>
+    <li><strong>Date:</strong> <span th:text="${dateTime}">2025-06-11 12:30</span></li>
+    <li><strong>Status:</strong> <span th:text="${status}">SUCCESS</span></li>
+</ul>
+<p>Thank you for trusting our bank.</p>
+</body>
+</html>

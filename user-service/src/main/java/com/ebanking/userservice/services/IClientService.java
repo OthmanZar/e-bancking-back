@@ -16,6 +16,7 @@ public interface IClientService {
 
     List<ClientRequestDTO> getAllClients();
 
+    ClientRequestDTO getClientByID(Long id) throws UserNotFoundException;
 
 
 }

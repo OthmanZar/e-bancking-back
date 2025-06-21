@@ -15,11 +15,18 @@ public abstract class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(nullable = false,unique = true)
     private String reference;
+    @Column(nullable = false)
     private String firstName;
+    @Column(nullable = false)
     private String lastName;
+    @Column(nullable = false, unique = true)
     private String email;
+    @Column(nullable = false, unique = true)
     private String phoneNumber;
+    @Enumerated(EnumType.STRING)
     private Sexe sexe;
+
 
 }

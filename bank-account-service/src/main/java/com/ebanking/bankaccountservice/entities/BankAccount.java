@@ -22,12 +22,15 @@ public abstract class BankAccount {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(unique = true, length = 16)
+    @Column(unique = true, length = 20 , nullable = false)
     private String accountNumber;
 
+    @Column(nullable = false)
     private BigDecimal balance;
 
+    @Enumerated(EnumType.STRING)
     private AccountStatus status;
 
+    @Column(nullable = false)
     private Long clientId;
 }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Account Creation Confirmation</title>
+</head>
+<body>
+<h2>Client Account Created</h2>
+<p>Dear <span th:text="${firstName}">John</span> <span th:text="${lastName}">Doe</span>,</p>
+<p>Your client profile has been successfully created with the following details:</p>
+<ul>
+    <li><strong>Email:</strong> <span th:text="${email}">john.doe@email.com</span></li>
+    <li><strong>Phone:</strong> <span th:text="${phoneNumber}">+212 600 000 000</span></li>
+    <li><strong>Sex:</strong> <span th:text="${sexe}">Male</span></li>
+    <li><strong>National ID:</strong> <span th:text="${nationalID}">BE123456</span></li>
+    <li><strong>Birthday:</strong> <span th:text="${birthday}">1990-01-01</span></li>
+    <li><strong>Address:</strong> <span th:text="${address}">123 Street, Rabat</span></li>
+</ul>
+<p>Welcome to our eBanking platform.</p>
+</body>
+</html>

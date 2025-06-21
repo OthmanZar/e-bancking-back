@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Card Confirmation</title>
+</head>
+<body>
+<h2>Card Issued Successfully</h2>
+<p>Your new bank card has been issued with the following details:</p>
+<ul>
+    <li><strong>Card Number:</strong> <span th:text="${cardNumber}">1234 5678 9012 3456</span></li>
+    <li><strong>CVV:</strong> <span th:text="${cvv}">123</span></li>
+    <li><strong>Expiry Date:</strong> <span th:text="${expiryDate}">2028-12-31</span></li>
+    <li><strong>Status:</strong> <span th:text="${status}">ACTIVE</span></li>
+</ul>
+<p>Please keep your card details secure and contact support for any questions.</p>
+</body>
+</html>

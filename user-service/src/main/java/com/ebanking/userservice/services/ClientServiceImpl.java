@@ -1,9 +1,11 @@
 package com.ebanking.userservice.services;
 
 import com.ebanking.userservice.client.BankAccountClient;
+import com.ebanking.userservice.dtos.ClientConfirmation;
 import com.ebanking.userservice.dtos.ClientRequestDTO;
 import com.ebanking.userservice.entities.Client;
 import com.ebanking.userservice.exceptions.UserNotFoundException;
+import com.ebanking.userservice.kafka.NotificationProducer;
 import com.ebanking.userservice.mappers.ClientMapper;
 import com.ebanking.userservice.repositories.ClientRepository;
 import lombok.RequiredArgsConstructor;
@@ -20,6 +22,7 @@ public class ClientServiceImpl implements IClientService {
     private final ClientRepository clientRepository;
     private final ClientMapper clientMapper;
     private final BankAccountClient bankAccountClient;
+    private final NotificationProducer notificationProducer;
 
     @Override
     @Transactional
@@ -29,7 +32,9 @@ public class ClientServiceImpl implements IClientService {
         client.setIsVerified(true);
         Client save = clientRepository.save(client);
 
-        bankAccountClient.createAccount(save.getId());
+        notificationProducer.sendNotification(clientMapper.clientToConfirmation(save));
+
+        bankAccountClient.createAccount(save.getId(), save.getEmail());
 
         return clientMapper.clientToDTO(save);
     }
@@ -67,5 +72,13 @@ public class ClientServiceImpl implements IClientService {
         }else {
             return clients.stream().map(clientMapper::clientToDTO).toList();
         }
+    }
+
+    @Override
+    public ClientRequestDTO getClientByID(Long id) throws UserNotFoundException {
+        Client client = clientRepository.findById(id).orElseThrow(() ->
+                new UserNotFoundException("Client Not Found !!")
+        );
+        return clientMapper.clientToDTO(client);
     }
 }

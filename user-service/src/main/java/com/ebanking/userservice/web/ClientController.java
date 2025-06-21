@@ -49,6 +49,16 @@ public class ClientController {
         }
     }
 
+    @GetMapping("/id/{id}")
+    public ResponseEntity<ClientRequestDTO> getClientByID(@PathVariable Long id) {
+        try {
+            ClientRequestDTO client = clientService.getClientByID(id);
+            return ResponseEntity.ok(client);
+        } catch (UserNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @GetMapping
     public ResponseEntity<List<ClientRequestDTO>> getAllClients() {
         List<ClientRequestDTO> clients = clientService.getAllClients();

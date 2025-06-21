@@ -1,5 +1,6 @@
 package com.ebanking.userservice.mappers;
 
+import com.ebanking.userservice.dtos.ClientConfirmation;
 import com.ebanking.userservice.dtos.ClientRequestDTO;
 import com.ebanking.userservice.entities.Client;
 import lombok.RequiredArgsConstructor;
@@ -35,6 +36,20 @@ public class ClientMapper {
                client.getBirthday(),
                client.getAddress()
        );
+    }
+
+    public ClientConfirmation clientToConfirmation(Client client){
+
+        return new ClientConfirmation(
+                client.getFirstName(),
+                client.getLastName(),
+                client.getEmail(),
+                client.getPhoneNumber(),
+                client.getSexe(),
+                client.getNationalID(),
+                client.getBirthday(),
+                client.getAddress()
+        );
     }
 
 }

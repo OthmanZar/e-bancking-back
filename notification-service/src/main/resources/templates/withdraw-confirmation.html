@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Withdraw Confirmation</title>
+</head>
+<body>
+<h2>Withdraw Confirmation</h2>
+<p>Dear Client,</p>
+<p>Your withdrawal request has been processed with the following details:</p>
+<ul>
+    <li><strong>Card Number:</strong> <span th:text="${cardNumber}">**** **** **** 1234</span></li>
+    <li><strong>Amount:</strong> <span th:text="${amount}">1500.00</span> MAD</li>
+    <li><strong>ATM Code:</strong> <span th:text="${atmCode}">ATM-RABAT-001</span></li>
+    <li><strong>Date:</strong> <span th:text="${transactionDate}">2025-06-11 13:45</span></li>
+    <li><strong>Status:</strong> <span th:text="${status}">SUCCESS</span></li>
+</ul>
+<p>Thank you for using our services.</p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: notification-service
+  data:
+    mongodb:
+      username: bankuser
+      password: bankpass
+      host: localhost
+      port: 27017
+      database: notification-ms
+      authentication-database: admin
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: withdrawGroup,transferGroup,depositGroup,clientGroup,bankGroup,cardGroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
+        spring.json.type.mapping: withdrawConfirmation:com.ebanking.notificationservice.dtos.WithdrawConfirmation,transferConfirmation:com.ebanking.notificationservice.dtos.TransferConfirmation,depositConfirmation:com.ebanking.notificationservice.dtos.DepositConfirmation,clientConfirmation:com.ebanking.notificationservice.dtos.ClientConfirmation,bankAccountConfirmation:com.ebanking.notificationservice.dtos.BankAccountConfirmation,cardConfirmation:com.ebanking.notificationservice.dtos.CardConfirmation
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: othmanzarrouk30@gmail.com
+    password: qtka grvu rmvq lkwd
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+server:
+  port: 9012

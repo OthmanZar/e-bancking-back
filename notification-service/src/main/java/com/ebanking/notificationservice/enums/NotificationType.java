@@ -1,0 +1,10 @@
+package com.ebanking.notificationservice.enums;
+
+public enum NotificationType{
+    WITHDRAW_NOTIFICATION,
+    TRANSFER_NOTIFICATION,
+    DEPOSIT_NOTIFICATION,
+    CREATE_ACCOUNT_NOTIFICATION,
+    CREATE_BANK_ACCOUNT_NOTIFICATION,
+    CREATE_CARD_NOTIFICATION,
+}
