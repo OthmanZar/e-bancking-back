@@ -70,7 +70,7 @@ public class GlobalExceptionHandler {
                 return ResponseEntity
                         .status(HttpStatus.INTERNAL_SERVER_ERROR)
                         .body(ExceptionResponse.builder()
-                                .businessErrorDescription("Unrecognized downstream error")
+                                .businessErrorDescription("Unrecognized downstream error Bank")
                                 .error("Raw: " + responseBody)
                                 .build());
             }

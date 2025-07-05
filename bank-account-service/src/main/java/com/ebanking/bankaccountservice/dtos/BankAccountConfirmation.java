@@ -5,7 +5,6 @@ import com.ebanking.bankaccountservice.enums.AccountStatus;
 import java.math.BigDecimal;
 
 public record BankAccountConfirmation(
-
         String accountNumber,
         String accountType,
         BigDecimal balance,

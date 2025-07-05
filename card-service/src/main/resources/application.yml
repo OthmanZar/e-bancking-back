@@ -1,4 +1,6 @@
 spring:
+  config:
+    import: optional:configserver:http://localhost:5000
   application:
     name: card-service
   datasource:
@@ -24,3 +26,10 @@ spring:
         spring.json.type.mapping: cardConfirmation:com.ebanking.cardservice.dtos.CardConfirmation
 server:
   port: 9094
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:9097/eureka

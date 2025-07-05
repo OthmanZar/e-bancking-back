@@ -1,8 +1,9 @@
 package com.ebanking.bankaccountservice.mappers;
 
-import com.ebanking.bankaccountservice.client.AccountClient;
+
 import com.ebanking.bankaccountservice.dtos.BankAccountConfirmation;
-import com.ebanking.bankaccountservice.dtos.ClientRequestDTO;
+
+import com.ebanking.bankaccountservice.dtos.ClientResponseDTO;
 import com.ebanking.bankaccountservice.dtos.CurrentResponseDTO;
 import com.ebanking.bankaccountservice.entities.BankAccount;
 import com.ebanking.bankaccountservice.entities.CurrentAccount;
@@ -19,7 +20,7 @@ public class CurrentAccountMapper {
 
 
 
-    public CurrentResponseDTO toResponseDTO(CurrentAccount currentAccount, ClientRequestDTO clientResponse) {
+    public CurrentResponseDTO toResponseDTO(CurrentAccount currentAccount, ClientResponseDTO clientResponse) {
         return new CurrentResponseDTO(
                 currentAccount.getId(),
                 currentAccount.getAccountNumber(),

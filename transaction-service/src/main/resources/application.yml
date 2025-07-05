@@ -1,4 +1,6 @@
 spring:
+  config:
+    import: optional:configserver:http://localhost:5000
   application:
     name: transaction-service
   datasource:
@@ -21,6 +23,12 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
-        spring.json.type.mapping: withdrawConfirmation:com.ebanking.transactionservice.dtos.WithdrawConfirmation,transferConfirmation:com.ebanking.transactionservice.dtos.TransferConfirmation,depositConfirmation:com.ebanking.transactionservice.dtos.DepositConfirmation
+        spring.json.type.mapping: withdrawConfirmation:com.ebanking.transactionservice.dtos.WithdrawConfirmation,transferConfirmation:com.ebanking.transactionservice.dtos.TransferConfirmation,depositConfirmation:com.ebanking.transactionservice.dtos.DepositConfirmation,transactionNotification:com.ebanking.transactionservice.dtos.TransactionNotification
 server:
   port: 9095
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:9097/eureka

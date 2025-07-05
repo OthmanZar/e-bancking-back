@@ -1,4 +1,7 @@
 spring:
+  config:
+    import: optional:configserver:http://localhost:5000
+
   application:
     name: atm-service
   datasource:
@@ -16,3 +19,10 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 server:
   port: 9096
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:9097/eureka

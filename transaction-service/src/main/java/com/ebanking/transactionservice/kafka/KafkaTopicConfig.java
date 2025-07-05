@@ -26,5 +26,11 @@ public class KafkaTopicConfig {
         return TopicBuilder.name("deposit-topic").build();
     }
 
+    @Bean
+    public NewTopic transactionTopic(){
+
+        return TopicBuilder.name("transaction-topic").build();
+    }
+
 
 }

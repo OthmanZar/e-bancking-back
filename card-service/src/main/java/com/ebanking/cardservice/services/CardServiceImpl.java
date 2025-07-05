@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.util.Optional;
 import java.util.Random;
 
 @Service
@@ -89,5 +90,11 @@ public class CardServiceImpl implements ICardService {
                 new CardNotFoundException("Card Not Found With this Number"));
 
         return cardMapper.toResponse(card);
+    }
+
+    @Override
+    public CardResponseDTO getCardByAccountId(Long accountId) throws CardNotFoundException {
+        Optional<Card> byId = cardRepository.findCardByCurrentAccountId(accountId);
+        return byId.map(cardMapper::toResponse).orElseThrow(() -> new CardNotFoundException("Card Not Found For this Account"));
     }
 }

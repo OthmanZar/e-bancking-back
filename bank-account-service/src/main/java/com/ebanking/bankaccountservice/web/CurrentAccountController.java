@@ -55,4 +55,10 @@ public class CurrentAccountController {
         return ResponseEntity.ok(currentResponseDTO);
     }
 
+    @PostMapping("/client/{id}")
+    public ResponseEntity<CurrentResponseDTO> getCurrentByClientID(@PathVariable Long id) throws BankAccountNotFound {
+        CurrentResponseDTO currentResponseDTO = currentAccountService.getCurrentAccountByClient_ID(id);
+        return ResponseEntity.ok(currentResponseDTO);
+    }
+
 }

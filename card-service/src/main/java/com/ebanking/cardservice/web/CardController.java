@@ -38,5 +38,13 @@ public class CardController {
     }
 
 
+    @PostMapping("account/{account_id}")
+    public ResponseEntity<CardResponseDTO> getCardByAccountId(@PathVariable("account_id") Long account_id) throws CardNotFoundException {
+        CardResponseDTO cardByCardNumber = cardService.getCardByAccountId(account_id);
+        return ResponseEntity.ok(cardByCardNumber);
+
+    }
+
+
 
 }

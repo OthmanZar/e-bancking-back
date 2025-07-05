@@ -4,7 +4,11 @@
     <file url="file://$PROJECT_DIR$/atm-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bank-account-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/card-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/discovery-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/notification-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/processing-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/transaction-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service/src/main/java" charset="UTF-8" />
   </component>

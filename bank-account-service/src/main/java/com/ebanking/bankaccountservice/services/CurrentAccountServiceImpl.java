@@ -2,7 +2,8 @@ package com.ebanking.bankaccountservice.services;
 
 import com.ebanking.bankaccountservice.client.AccountClient;
 import com.ebanking.bankaccountservice.client.CardClient;
-import com.ebanking.bankaccountservice.dtos.ClientRequestDTO;
+
+import com.ebanking.bankaccountservice.dtos.ClientResponseDTO;
 import com.ebanking.bankaccountservice.dtos.CurrentResponseDTO;
 import com.ebanking.bankaccountservice.entities.CurrentAccount;
 import com.ebanking.bankaccountservice.enums.AccountStatus;
@@ -78,7 +79,7 @@ public class CurrentAccountServiceImpl implements ICurrentAccountService {
 
         CurrentAccount currentAccount = currentAccountRepository.findCurrentAccountByAccountNumber(accountNumber).orElseThrow(() ->
                 new BankAccountNotFound("Current Account Not Found"));
-        Optional<ClientRequestDTO> clientByID = accountClient.getClientByID(currentAccount.getClientId());
+        Optional<ClientResponseDTO> clientByID = accountClient.getClientByID(currentAccount.getClientId());
         return currentAccountMapper.toResponseDTO(currentAccount,clientByID.get());
     }
 
@@ -90,7 +91,7 @@ public class CurrentAccountServiceImpl implements ICurrentAccountService {
                         new BankAccountNotFound("Current Account Not Found")
         );
 
-        Optional<ClientRequestDTO> clientByID = accountClient.getClientByID(currentAccount.getClientId());
+        Optional<ClientResponseDTO> clientByID = accountClient.getClientByID(currentAccount.getClientId());
 
         return currentAccountMapper.toResponseDTO(currentAccount,clientByID.get());
     }
@@ -104,8 +105,20 @@ public class CurrentAccountServiceImpl implements ICurrentAccountService {
         currentAccount.setBalance(amount);
 
         CurrentAccount save = currentAccountRepository.save(currentAccount);
-        Optional<ClientRequestDTO> clientByID = accountClient.getClientByID(save.getClientId());
+        Optional<ClientResponseDTO> clientByID = accountClient.getClientByID(save.getClientId());
         return currentAccountMapper.toResponseDTO(save,clientByID.get());
+    }
+
+    @Override
+    public CurrentResponseDTO getCurrentAccountByClient_ID(Long id) throws BankAccountNotFound {
+        Optional<ClientResponseDTO> clientByID = accountClient.getClientByID(id);
+        if(clientByID.isPresent()){
+            Optional<CurrentAccount> currentAccountByClientId = currentAccountRepository.findCurrentAccountByClientId(clientByID.get().id());
+            if(currentAccountByClientId.isPresent()){
+                return currentAccountMapper.toResponseDTO(currentAccountByClientId.get(),clientByID.get());
+            }
+        }
+        throw new BankAccountNotFound("The Client Or Bank Account Not Found");
     }
 
 

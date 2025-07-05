@@ -3,13 +3,16 @@ package com.ebanking.transactionservice.services;
 import com.ebanking.transactionservice.clients.BankAccountClient;
 import com.ebanking.transactionservice.clients.CardClient;
 import com.ebanking.transactionservice.dtos.*;
+import com.ebanking.transactionservice.entities.Transaction;
 import com.ebanking.transactionservice.entities.Withdrawal;
 import com.ebanking.transactionservice.enums.CardStatus;
 import com.ebanking.transactionservice.enums.TransactionStatus;
 import com.ebanking.transactionservice.exceptions.BankAccountNotFound;
 import com.ebanking.transactionservice.kafka.NotificationProducer;
 import com.ebanking.transactionservice.mappers.WithdrawalMapper;
+import com.ebanking.transactionservice.repositories.TransactionRepository;
 import com.ebanking.transactionservice.repositories.WithdrawalRepository;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
@@ -18,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -29,6 +33,9 @@ public class WithdrawalServiceImpl implements IWithdrawalService {
     private final BankAccountClient bankAccountClient;
     private final WithdrawalMapper withdrawalMapper;
     private final NotificationProducer notificationProducer;
+    private final TransactionService transactionService;
+    private final HttpServletRequest request;
+    private final TransactionRepository transactionRepository;
     @Transactional
     @Override
     public WithdrawalResponseDTO withdrawal(WithdrawalRequestDTO withdrawalRequestDTO) throws BadRequestException, BankAccountNotFound {
@@ -76,6 +83,34 @@ public class WithdrawalServiceImpl implements IWithdrawalService {
                     currentResponseDTO.email()
 
             ));
+
+            System.out.println(request.getHeader("X-Real-IP") + "channel : "+ request.getHeader("X-Channel"));
+
+            Transaction lastTransfer = transactionRepository.findTopByOrderByTransactionDateDesc();
+            long secondsSinceLastTransfer = ChronoUnit.SECONDS.between(
+                    lastTransfer.getTransactionDate(),
+                    save.getTransactionDate()
+            );
+            transactionService.sendTransactionToProcessing(
+                    new TransactionNotification(
+                            "U"+currentResponseDTO.accountNumber(),
+                            "C"+currentResponseDTO.accountNumber(),
+                            save.getId().intValue(),
+                            withdrawal.getAmount(),
+                            currentResponseDTO.balance(),
+                            postTransactionAmount,
+                            currentResponseDTO.balance(),
+                            postTransactionAmount,
+                            withdrawalRepository.getAverageTransferAmount(),
+                            secondsSinceLastTransfer,
+                            "",
+                            request.getHeader("X-Channel"),
+                            "withdrawal",
+                            save.getTransactionDate().toString(),
+                            request.getHeader("X-Real-IP")
+
+                    )
+            );
 
             return withdrawalMapper.toWithdrawalResponseDTO(save);
         }else{

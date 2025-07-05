@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: gateway-service
+  config:
+    import: optional:configserver:http://localhost:5000
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/api/clients/**,/api/clients/auth/**
+            - id: transaction-service
+              uri: lb://TRANSACTION-SERVICE
+              predicates:
+                - Path=/api/transfer/**,/api/withdraw/**,/api/transactions/**,/api/deposit/**
+            - id: card-service
+              uri: lb://CARD-SERVICE
+              predicates:
+                - Path=/api/card/**
+            - id: bank-account-service
+              uri: lb://BANK-ACCOUNT-SERVICE
+              predicates:
+                - Path=/api/account/current/**,/api/account/**
+            - id: atm-service
+              uri: lb://ATM-SERVICE
+              predicates:
+                - Path=/api/atm/**
+          discovery:
+            locator:
+              enabled: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090/realms/e-banking
+
+server:
+  port: 9099
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:9097/eureka

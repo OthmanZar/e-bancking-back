@@ -1,6 +1,7 @@
 package com.ebanking.userservice.dtos;
 
 import com.ebanking.userservice.enums.Sexe;
+import com.ebanking.userservice.enums.TypeUser;
 
 import java.time.LocalDate;
 
@@ -12,6 +13,7 @@ public record ClientConfirmation(
         Sexe sexe,
         String nationalID,
         LocalDate birthday,
-        String address
+        String address,
+        TypeUser type
 ) {
 }

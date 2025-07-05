@@ -1,5 +1,6 @@
 package com.ebanking.notificationservice.email;
 
+
 import lombok.Getter;
 
 public enum EmailTemplates {

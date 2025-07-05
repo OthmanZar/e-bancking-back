@@ -28,5 +28,6 @@ public abstract class User {
     @Enumerated(EnumType.STRING)
     private Sexe sexe;
 
+    private String imageUrl;
 
 }

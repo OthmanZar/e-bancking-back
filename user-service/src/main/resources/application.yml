@@ -1,5 +1,8 @@
 
 spring:
+
+  config:
+    import: optional:configserver:http://localhost:5000
   application:
     name: user-service
   datasource:
@@ -24,3 +27,18 @@ spring:
         spring.json.type.mapping: clientConfirmation:com.ebanking.userservice.dtos.ClientConfirmation
 server:
   port: 9091
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:9097/eureka
+
+keycloak:
+  url: http://localhost:9090
+  realm: e-banking
+  client-id: microservice-auth
+  client-secret: brnb2a1II36HJAI7uMvwqYCx2fuQcCvk
+
+

@@ -27,6 +27,38 @@ public class EmailService {
     private final JavaMailSender mailSender;
     private final SpringTemplateEngine templateEngine;
 
+
+    @Async
+    public void sendDepositSuccessEmail(DepositConfirmation dto) {
+        Map<String, Object> vars = Map.of(
+
+                "to_accountNumber", dto.to_accountNumber(),
+                "amount", dto.amount(),
+                "dateTime", dto.dateTime(),
+                "status", dto.status()
+        );
+
+        try {
+            // Send to the sender
+//            sendEmail(
+//                    dto.fromDestinationEmail(),
+//                    EmailTemplates.DEPOSIT_NOTIFICATION.getTemplate(),
+//                    "Transfer Confirmation - You sent money",
+//                    vars
+//            );
+
+            // Send to the receiver
+            sendEmail(
+                    dto.toDestinationEmail(),
+                    EmailTemplates.DEPOSIT_NOTIFICATION.getTemplate(),
+                    "Deposit Confirmation - You received money",
+                    vars
+            );
+
+        } catch (MessagingException | jakarta.mail.MessagingException e) {
+            log.warn("❌ Failed to send Deposit email to {} or {}", dto.fromDestinationEmail(), dto.toDestinationEmail());
+        }
+    }
     @Async
     public void sendWithdrawSuccessEmail(WithdrawConfirmation dto) {
         Map<String, Object> vars = Map.of(

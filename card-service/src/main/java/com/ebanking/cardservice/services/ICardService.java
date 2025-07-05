@@ -12,4 +12,6 @@ public interface ICardService {
     void updateCard(UpdateCardDTO updateCardDTO) throws CardNotFoundException;
 
     CardResponseDTO getCardByCardNumber(String cardNumber) throws CardNotFoundException;
+
+    CardResponseDTO getCardByAccountId(Long accountId) throws CardNotFoundException;
 }

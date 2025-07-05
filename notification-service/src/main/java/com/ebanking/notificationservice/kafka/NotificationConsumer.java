@@ -51,6 +51,8 @@ public class NotificationConsumer {
                 .notificationDate(LocalDateTime.now())
                 .depositConfirmation(depositConfirmation)
                 .build());
+
+        emailService.sendDepositSuccessEmail(depositConfirmation);
     }
 
     @KafkaListener(topics = "bank-account-topic")

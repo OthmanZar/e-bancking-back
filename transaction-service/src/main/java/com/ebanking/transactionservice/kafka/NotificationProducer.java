@@ -1,6 +1,7 @@
 package com.ebanking.transactionservice.kafka;
 
 import com.ebanking.transactionservice.dtos.DepositConfirmation;
+import com.ebanking.transactionservice.dtos.TransactionNotification;
 import com.ebanking.transactionservice.dtos.TransferConfirmation;
 import com.ebanking.transactionservice.dtos.WithdrawConfirmation;
 import lombok.RequiredArgsConstructor;
@@ -46,6 +47,16 @@ public class NotificationProducer {
         Message<DepositConfirmation> message = MessageBuilder.
                 withPayload(request).
                 setHeader(KafkaHeaders.TOPIC,"deposit-topic")
+                .build();
+        kafkaTemplateDeposit.send(message);
+    }
+
+    public void sendNotificationTransaction(TransactionNotification request){
+        log.info("Sending Notification with body <{}>",request);
+
+        Message<TransactionNotification> message = MessageBuilder.
+                withPayload(request).
+                setHeader(KafkaHeaders.TOPIC,"transaction-topic")
                 .build();
         kafkaTemplateDeposit.send(message);
     }

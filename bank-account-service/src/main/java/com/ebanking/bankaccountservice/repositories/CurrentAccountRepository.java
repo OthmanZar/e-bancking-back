@@ -10,4 +10,7 @@ public interface CurrentAccountRepository extends JpaRepository<CurrentAccount,L
     boolean existsCurrentAccountByAccountNumber(String number);
 
     Optional<CurrentAccount> findCurrentAccountByAccountNumber(String number);
+
+    Optional<CurrentAccount> findCurrentAccountByClientId(Long id);
+
 }

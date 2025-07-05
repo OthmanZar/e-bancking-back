@@ -2,10 +2,12 @@ package com.ebanking.bankaccountservice.dtos;
 
 
 import com.ebanking.bankaccountservice.enums.Sexe;
+import com.ebanking.bankaccountservice.enums.TypeUser;
 
 import java.time.LocalDate;
 
 public record ClientRequestDTO(
+
         String firstName,
         String lastName,
         String email,
@@ -13,7 +15,8 @@ public record ClientRequestDTO(
         Sexe sexe,
         String nationalID,
         LocalDate birthday,
-        String address
+        String address,
+        TypeUser userType
 
 ) {
 }

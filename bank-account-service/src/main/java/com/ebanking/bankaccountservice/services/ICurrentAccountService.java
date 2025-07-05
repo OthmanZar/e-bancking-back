@@ -18,5 +18,6 @@ public interface ICurrentAccountService {
 
     CurrentResponseDTO updateCurrentAccountByAccountNumber(String accountNumber, BigDecimal amount) throws BankAccountNotFound;
 
+    CurrentResponseDTO getCurrentAccountByClient_ID(Long id) throws BankAccountNotFound;
 
 }

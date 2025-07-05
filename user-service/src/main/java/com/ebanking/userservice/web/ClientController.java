@@ -1,6 +1,7 @@
 package com.ebanking.userservice.web;
 
 import com.ebanking.userservice.dtos.ClientRequestDTO;
+import com.ebanking.userservice.dtos.ClientResponseDTO;
 import com.ebanking.userservice.exceptions.UserNotFoundException;
 import com.ebanking.userservice.services.IClientService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +18,8 @@ public class ClientController {
     private final IClientService clientService;
 
     @PostMapping
-    public ResponseEntity<ClientRequestDTO> createClient(@RequestBody ClientRequestDTO clientRequestDTO) {
-        ClientRequestDTO createdClient = clientService.createClientAccount(clientRequestDTO);
+    public ResponseEntity<ClientResponseDTO> createClient(@RequestBody ClientRequestDTO clientRequestDTO) {
+        ClientResponseDTO createdClient = clientService.createClientAccount(clientRequestDTO);
         return new ResponseEntity<>(createdClient, HttpStatus.CREATED);
     }
 
@@ -40,9 +41,9 @@ public class ClientController {
     }
 
     @GetMapping("/{reference}")
-    public ResponseEntity<ClientRequestDTO> getClient(@PathVariable String reference) {
+    public ResponseEntity<ClientResponseDTO> getClient(@PathVariable String reference) {
         try {
-            ClientRequestDTO client = clientService.getClientByReference(reference);
+            ClientResponseDTO client = clientService.getClientByReference(reference);
             return ResponseEntity.ok(client);
         } catch (UserNotFoundException e) {
             return ResponseEntity.notFound().build();
@@ -50,9 +51,9 @@ public class ClientController {
     }
 
     @GetMapping("/id/{id}")
-    public ResponseEntity<ClientRequestDTO> getClientByID(@PathVariable Long id) {
+    public ResponseEntity<ClientResponseDTO> getClientByID(@PathVariable Long id) {
         try {
-            ClientRequestDTO client = clientService.getClientByID(id);
+            ClientResponseDTO client = clientService.getClientByID(id);
             return ResponseEntity.ok(client);
         } catch (UserNotFoundException e) {
             return ResponseEntity.notFound().build();
@@ -60,8 +61,8 @@ public class ClientController {
     }
 
     @GetMapping
-    public ResponseEntity<List<ClientRequestDTO>> getAllClients() {
-        List<ClientRequestDTO> clients = clientService.getAllClients();
+    public ResponseEntity<List<ClientResponseDTO>> getAllClients() {
+        List<ClientResponseDTO> clients = clientService.getAllClients();
         return ResponseEntity.ok(clients);
     }
 }

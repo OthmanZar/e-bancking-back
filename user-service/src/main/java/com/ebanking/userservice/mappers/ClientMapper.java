@@ -2,6 +2,7 @@ package com.ebanking.userservice.mappers;
 
 import com.ebanking.userservice.dtos.ClientConfirmation;
 import com.ebanking.userservice.dtos.ClientRequestDTO;
+import com.ebanking.userservice.dtos.ClientResponseDTO;
 import com.ebanking.userservice.entities.Client;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,13 +21,14 @@ public class ClientMapper {
         client.setLastName(clientRequestDTO.lastName());
         client.setPhoneNumber(clientRequestDTO.phoneNumber());
         client.setSexe(clientRequestDTO.sexe());
-
+        client.setUserType(clientRequestDTO.type());
         return client;
     }
 
-    public ClientRequestDTO clientToDTO(Client client){
+    public ClientResponseDTO clientToDTO(Client client){
 
-       return new ClientRequestDTO(
+       return new ClientResponseDTO(
+               client.getId(),
                client.getFirstName(),
                client.getLastName(),
                client.getEmail(),
@@ -34,7 +36,9 @@ public class ClientMapper {
                client.getSexe(),
                client.getNationalID(),
                client.getBirthday(),
-               client.getAddress()
+               client.getAddress(),
+               client.getUserType(),
+               client.getImageUrl()
        );
     }
 
@@ -48,7 +52,8 @@ public class ClientMapper {
                 client.getSexe(),
                 client.getNationalID(),
                 client.getBirthday(),
-                client.getAddress()
+                client.getAddress(),
+                client.getUserType()
         );
     }
 
